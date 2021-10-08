@@ -59,7 +59,7 @@ article {
 }
 
 /* 문제 화면 */
-.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+.btn-answer {
     background-color: #1f1f1f;
     border:#1f1f1f;
     width: 288px;
@@ -67,7 +67,7 @@ article {
     font-size: 13px;
     color: #ffffff;
 }
-.btn-answer:hover {
+.btn-answer:hover, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
     background-color: #ff9300 !important;
     border:#1f1f1f !important;
     width: 288px;

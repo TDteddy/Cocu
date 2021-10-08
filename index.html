@@ -40,6 +40,9 @@
         <button id="D" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
         	<img src="img/round.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
         </button>
+        <button id="next" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
+            다음>
+        </button>
         <div class="rectangle"></div>
     </article>
     <article class="question2">
@@ -68,6 +71,9 @@
         <button id="I" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
         	<img src="img/pd.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
         </button>
+        <button id="fin" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
+            다음>
+        </button>
         <div class="rectangle"></div>
     </article>
     <article class="result">
@@ -92,6 +98,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script>
+        var stat= "Z";
     	var thong = "0";
     	var cheeky = "0";
     	var tanga = "0";
@@ -99,48 +106,85 @@
             $(".start").hide();
             $(".question").show();
         }
+        $("#next").click(function(){
+            if (stat=="A"){
+                ++thong;
+                ++cheeky;
+                ++tanga;
+                next();
+            }
+            else if (stat=="B"){
+                ++cheeky;
+                next();
+            }
+            else if (stat=="C"){
+                ++thong;
+                ++cheeky;
+                ++tanga;
+                next();
+            }
+            else if (stat=="D"){
+                ++cheeky;
+                next();
+            }
+            else {
+                alert("선택지를 다시 확인해주세요!");
+            }
+        });
+        $("#fin").click(function(){
+            if (stat=="E"){
+                ++thong;
+                ++tanga;
+                fin();
+            }
+            else if (stat=="F"){
+                ++thong;
+                fin();
+            }
+            else if (stat=="G"){
+                ++cheeky
+                fin();
+            }
+            else if (stat=="H"){
+                ++thong;
+                ++tanga;
+                fin();
+            }
+            else if (stat=="I"){
+                ++thong;
+                ++tanga;
+                fin();
+            }
+            else {
+                alert("선택지를 다시 확인해주세요!");
+            }
+        });
         $("#A").click(function(){
-        	++thong;
-        	++cheeky;
-        	++tanga;
-        	next();
+        	stat="A";
         });
         $("#B").click(function(){
-        	++cheeky;
-        	next();
+            stat="B";
         });
         $("#C").click(function(){
-        	++thong;
-        	++cheeky;
-        	++tanga;
-        	next();
+            stat="C";
         });
         $("#D").click(function(){
-        	++cheeky;
-        	next();
+            stat="D";
         });
         $("#E").click(function(){
-        	++thong;
-        	++tanga;
-        	fin();
+        	stat="E";
         });
         $("#F").click(function(){
-        	++thong;
-        	fin();
+        	stat="F";
         });
         $("#G").click(function(){
-        	++cheeky
-        	fin();
+            stat="G";
         });
         $("#H").click(function(){
-        	++thong;
-        	++tanga;
-        	fin();
+            stat="H";
         });
         $("#I").click(function(){
-        	++thong;
-        	++tanga;
-        	fin();
+        	stat="I";
         });
         function next(){
         	$(".question").hide();
