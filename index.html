@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>체형별로 알아보는 내게 맞는 속옷</title>
+    <title>내게 맞는 속옷 테스트</title>
     <meta name="description" content="나에게 맞는 속옷 유형을 추천해주는 테스트 입니다.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="내게 맞는 속옷 테스트">
@@ -13,201 +13,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
-	<article class="start">
-        <h1 class="main-title mt-5 text-center">체형별로 알아보는 내게 맞는 속옷</h1>
-        <h2 class="sub-title mt-3 text-center">나는 어떤 속옷에 맞는 타입일까?</h1>
-        <img class="titleimg" src="img/start.png" alt="title-img" onclick='start();'>
-    </article>
-    <article class="question">
-    	<div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/2*1%)"></div>
-        </div>
-        <h2 id="title" class="question-content text-center mt-4 mb-4">당신의 골반 타입은 어느 모양에 더 가까운가요?</h2>
+    <article class="start">
+        <h1 class="main-title mt-5 text-center">내게맞는 속옷 테스트</h1>
+        <h2 class="sub-title mt-3 text-center">어떤 테스트를 진행할까요?</h1>
         <input id="type" type="hidden" value="EI">
         <div class="rectangle mt-5"></div>
-        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/heart.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
+        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5" onclick="type1()">
+            체형별로 알아보는 속옷테스트
         </button>
         <div class="mid-rectangle"></div>
-        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/square.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
+        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5" onclick="type2()">
+            성향별로 알아보는 속옷테스트
         </button>
-        <div class="mid-rectangle"></div>
-        <button id="C" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/vshape.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <div class="mid-rectangle"></div>
-        <button id="D" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/round.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <button id="next" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-            다음>
-        </button>
-        <div class="rectangle"></div>
-    </article>
-    <article class="question2">
-    	<div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/2*2%)"></div>
-        </div>
-        <h2 id="title" class="question-content text-center mt-4 mb-4">당신의 신체 타입은 어느 모양에 더 가까운가요?</h2>
-        <input id="type" type="hidden" value="EI">
-        <div class="rectangle mt-5"></div>
-        <button id="E" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/pt.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <div class="mid-rectangle"></div>
-        <button id="F" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/pc.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <div class="mid-rectangle"></div>
-        <button id="G" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/ps.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <div class="mid-rectangle"></div>
-        <button id="H" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/pb.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <div class="mid-rectangle"></div>
-        <button id="I" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-        	<img src="img/pd.png">텍스트가 들어갈 수 있으니 이미지내에서</br>작은 텍스트는 빼는게 좋을거같습니다
-        </button>
-        <button id="fin" type="button" class="btn-answer btn btn-primary pt-5 pb-5">
-            다음>
-        </button>
-        <div class="rectangle"></div>
-    </article>
-    <article class="result">
-        <span class="result-message mt-4 mb-4">나에게 맞는 속옷은?</span>
-        <img id="img" class="rounded-circle mt-5" src="img/lion.png" alt="이미지준비중">
-        <h3 id="explain" class="result-explain text-center mt-4">당신에게 맞는 속옷은</h3>
-        <h2 id="pantiesname" class="result-animal text-center mt-4 mb-4">속옷 이름</h2>
-        <div class="rectangle mt-4 mb-4"></div>
-        <span class="share-message mb-4">나에게 맞는 속옷 <strong>사러가기</strong></span>
-        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+        <div class="rectangle">
     </article>
     <article class="logo">
         <img class="mt-5 likelion-logo" src="img/likelion-logo.png" alt="likelion-logo">
         <span class="mt-2 text-center copyright-text">Copyright 2021 COCU all rights reserved</span>
     </article>
-
-
-
-
-
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-    <script>
-        var stat= "Z";
-    	var thong = "0";
-    	var cheeky = "0";
-    	var tanga = "0";
-    	function start() {
-            $(".start").hide();
-            $(".question").show();
-        }
-        $("#next").click(function(){
-            if (stat=="A"){
-                ++thong;
-                ++cheeky;
-                ++tanga;
-                next();
-            }
-            else if (stat=="B"){
-                ++cheeky;
-                next();
-            }
-            else if (stat=="C"){
-                ++thong;
-                ++cheeky;
-                ++tanga;
-                next();
-            }
-            else if (stat=="D"){
-                ++cheeky;
-                next();
-            }
-            else {
-                alert("선택지를 다시 확인해주세요!");
-            }
-        });
-        $("#fin").click(function(){
-            if (stat=="E"){
-                ++thong;
-                ++tanga;
-                fin();
-            }
-            else if (stat=="F"){
-                ++thong;
-                fin();
-            }
-            else if (stat=="G"){
-                ++cheeky
-                fin();
-            }
-            else if (stat=="H"){
-                ++thong;
-                ++tanga;
-                fin();
-            }
-            else if (stat=="I"){
-                ++thong;
-                ++tanga;
-                fin();
-            }
-            else {
-                alert("선택지를 다시 확인해주세요!");
-            }
-        });
-        $("#A").click(function(){
-        	stat="A";
-        });
-        $("#B").click(function(){
-            stat="B";
-        });
-        $("#C").click(function(){
-            stat="C";
-        });
-        $("#D").click(function(){
-            stat="D";
-        });
-        $("#E").click(function(){
-        	stat="E";
-        });
-        $("#F").click(function(){
-        	stat="F";
-        });
-        $("#G").click(function(){
-            stat="G";
-        });
-        $("#H").click(function(){
-            stat="H";
-        });
-        $("#I").click(function(){
-        	stat="I";
-        });
-        function next(){
-        	$(".question").hide();
-            $(".question2").show();
-        }
-        function fin(){
-        	$("#pantiesname").html(check());
-        	$(".question2").hide();
-            $(".result").show();
-        }
-        function check(){
-        	name="";
-        	if (thong>0) {
-        		name+='텅,';
-        	}
-        	if (cheeky>0) {
-        		name+='치키,';
-        	}
-        	if (tanga>0) {
-        		name+='탕가,';
-        	}
-        	name = name.slice(0,-1);
-        	return name;
-        }
-    </script>
 </body>
+<script>
+    function type1(){
+        location.href="type1.html";
+    }
+    function type2(){
+        location.href="type2.html";
+    }
+</script>
