@@ -1,7 +1,7 @@
 /* 전체 */
 body {
-    background-color: #1f1f1f;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #666666;
     font-family: 'Noto Sans KR', sans-serif;
 }
 article {
@@ -28,7 +28,7 @@ article {
 .sub-title {
     font-size: 24px;
     font-weight: 100;
-    color: #ebebeb;
+    color: #e2b7d5;
 }
 .updown-slash {
     width: 166px;
@@ -60,12 +60,12 @@ article {
 
 /* 문제 화면 */
 .btn-answer {
-    background-color: #1f1f1f;
-    border:#1f1f1f;
+    background-color: #ffffff;
+    border:#ffffff;
     width: 288px;
     margin: 0 auto;
     font-size: 13px;
-    color: #ffffff;
+    color: #000000;
 }
 .btn-answer:hover, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
     background-color: #ff9300 !important;
@@ -96,13 +96,13 @@ article {
 .rectangle {
     width: 288px;
     height: 8px;
-    background-color: #383a43;
+    background-color: #d1d1d1;
     margin: 0 auto;
 }
 .mid-rectangle {
     width: 288px;
     height: 1px;
-    background-color: #383a43;
+    background-color: #d1d1d1;
     margin: 0 auto;
 }
 
@@ -116,7 +116,7 @@ article {
 .result-animal {
     font-size: 18px;
     font-weight: 100;
-    color: #ebebeb;
+    color: #e2b7d5;
 }
 .result-explain {
     font-size: 13px;
@@ -125,7 +125,7 @@ article {
 }
 .share-message {
     margin: 0 auto;
-    color:#ffffff;
+    color:#666666;
     font-size: 24px;
     font-weight: 100;
 }
