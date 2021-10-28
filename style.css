@@ -30,6 +30,11 @@ article {
     font-weight: 100;
     color: #e2b7d5;
 }
+.resimg{
+    display: none;
+    width: 84px;
+    height: 84px;
+}
 .updown-slash {
     width: 166px;
     margin: 0 auto;
@@ -131,6 +136,7 @@ article {
 }
 .result {
     display: none;
+    text-align: center;
 }
 #img {
     width: 288px;
