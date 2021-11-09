@@ -46,18 +46,18 @@ article {
 }
 .btn-start {
     font-size: 16px;
-    color:#ff9300;
+    color:#e2b7d5;
     background-color: #1f1f1f;
     border:#1f1f1f;
 }
 .btn-start, .btn-start:visited, .btn-start:hover, .btn-start:active {
     font-size: 16px;
-    color:#ff9300;
+    color:#e2b7d5;
     background-color: #1f1f1f;
     border:#1f1f1f;
 }
 .btn-start:active, .btn-start:focus {
-    background-color: #ff9300 !important;
+    background-color: #e2b7d5 !important;
     border:#1f1f1f !important;
     font-size: 16px;
     color:#ffffff;
@@ -73,7 +73,7 @@ article {
     color: #000000;
 }
 .btn-answer:hover, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
-    background-color: #ff9300 !important;
+    background-color: #e2b7d5 !important;
     border:#1f1f1f !important;
     width: 288px;
     margin: 0 auto;
@@ -81,7 +81,7 @@ article {
     color: #ffffff;
 }
 .progress-bar {
-    background-color: #ff9300;
+    background-color: #e2b7d5;
 }
 .progress {
     background-color: #525764;
@@ -96,7 +96,7 @@ article {
 }
 .question-content {
     font-size: 14px;
-    color: #ff9300;
+    color: #e2b7d5;
 }
 .rectangle {
     width: 288px;
@@ -113,7 +113,7 @@ article {
 
 /* 결과 화면 */
 .result-message {
-    color: #ff9300;
+    color: #e2b7d5;
     margin: 0 auto;
     font-size: 24px;
     font-weight: 100;
@@ -126,7 +126,7 @@ article {
 .result-explain {
     font-size: 13px;
     font-weight: normal;
-    color: #ff9300;
+    color: #e2b7d5;
 }
 .share-message {
     margin: 0 auto;
