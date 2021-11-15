@@ -86,7 +86,7 @@
         <h3 id="explain" class="result-explain text-center mt-4">당신에게 맞는 속옷은</h3>
         <h2 id="pantiesname" class="result-animal text-center mt-4 mb-4">속옷 이름</h2>
         <div class="rectangle mt-4 mb-4"></div>
-        <span class="share-message mb-4">나에게 맞는 속옷 <strong>사러가기</strong></span>
+        <span class="share-message mb-4" onclick="gotoshop()">나에게 맞는 속옷 <strong>사러가기</strong></span>
         <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
     </article>
     <article class="logo">
@@ -211,6 +211,20 @@
         	}
         	name = name.slice(0,-1);
         	return name;
+        }
+        function gotoshop(){
+            webaddress="https://cocu.me/product-tag/";
+            if (thong>0) {
+                webaddress+='thong,';
+            }
+            if (cheeky>0) {
+                webaddress+='cheeky,';
+            }
+            if (tanga>0) {
+                webaddress+='tanga,';
+            }
+            webaddress = webaddress.slice(0,-1);
+            location.href=webaddress;
         }
     </script>
 </body>
