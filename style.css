@@ -166,3 +166,16 @@ article {
 #button{
     padding : 0px !important;
 }
+.resbutton{
+    background-color: #ffffff !important;
+    border:#d1d1d1 !important;
+    font-size: 13px;
+    color: #000000;
+}
+.select {
+    background-color: #ffffff !important;
+    border:#1f1f1f !important;
+    font-size: 13px;
+    color: #ffffff;
+    filter: brightness(50%);
+}
