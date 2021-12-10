@@ -79,9 +79,15 @@
     <article class="result">
         <span class="result-message mt-4 mb-4">나에게 맞는 속옷은?</span>
         <div id="resultimage">
-        <img id="thong" class="resimg mt-5" src="img/텅.jpg" alt="이미지준비중">
-        <img id="cheeky" class="resimg mt-5" src="img/치키.jpg" alt="이미지준비중">
-        <img id="tanga" class="resimg mt-5" src="img/탕가.jpg" alt="이미지준비중">
+        <button id="aathong" type="button" class="resbutton">
+            <img id="thong" src="img/텅.jpg" alt="이미지준비중">
+        </button>
+        <button id="aacheeky" type="button" class="resbutton">
+            <img id="cheeky" src="img/치키.jpg" alt="이미지준비중">
+        </button>
+        <button id="aatanga" type="button" class="resbutton">
+            <img id="tanga" src="img/탕가.jpg" alt="이미지준비중">
+        </button>
         </div>
         <h3 id="explain" class="result-explain text-center mt-4">당신에게 맞는 속옷은</h3>
         <h2 id="pantiesname" class="result-animal text-center mt-4 mb-4">속옷 이름</h2>
@@ -103,6 +109,7 @@
     </script>
     <script>
         var stat= "Z";
+        var resultype=[0,0,0];
     	var thong = "0";
     	var cheeky = "0";
     	var tanga = "0";
@@ -190,6 +197,43 @@
         $("#I").click(function(){
         	stat="I";
         });
+        $("#aathong").click(function(){
+            if (resultype[0]==0) {
+                resultype[0]=1;
+                $(this).removeClass('resbutton');
+                $(this).addClass('select');
+            }
+            else{
+                resultype[0]=0;
+                $(this).removeClass('select');
+                $(this).addClass('resbutton');
+            }
+            
+        });
+        $("#aacheeky").click(function(){
+            if (resultype[1]==0) {
+                resultype[1]=1;
+                $(this).removeClass('resbutton');
+                $(this).addClass('select');
+            }
+            else{
+                resultype[1]=0;
+                $(this).removeClass('select');
+                $(this).addClass('resbutton');
+            }
+        });
+        $("#aatanga").click(function(){
+            if (resultype[2]==0) {
+                resultype[2]=1;
+                $(this).removeClass('resbutton');
+                $(this).addClass('select');
+            }
+            else{
+                resultype[2]=0;
+                $(this).removeClass('select');
+                $(this).addClass('resbutton');
+            }
+        });
         function next(){
         	$(".question").hide();
             $(".question2").show();
@@ -218,13 +262,13 @@
         }
         function gotoshop(){
             webaddress="https://cocu.me/product-tag/";
-            if (thong>0) {
+            if (resultype[0]>0) {
                 webaddress+='thong,';
             }
-            if (cheeky>0) {
+            if (resultype[1]>0) {
                 webaddress+='cheeky,';
             }
-            if (tanga>0) {
+            if (resultype[2]>0) {
                 webaddress+='tanga,';
             }
             webaddress = webaddress.slice(0,-1);
